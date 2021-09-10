@@ -12,7 +12,6 @@ from page_objects.careers_page import LoginPage
 @ddt
 class TestLogin(unittest.TestCase):
 
-    @classmethod
     def setUp(cls):
         cls.driver = webdriver.Chrome(executable_path="../drivers/chromedriver.exe")
         cls.driver.get("https://obdbqa64615.obfuscate.xcade.dev/en_US/careers/")
@@ -32,7 +31,6 @@ class TestLogin(unittest.TestCase):
         is_login_successful = self.login_page.is_login_successful()
         self.assertEqual(is_login_successful, "My Profile | Company", msg="The title is different.")
 
-    @classmethod
     def tearDown(cls):
         cls.driver.quit()
 
