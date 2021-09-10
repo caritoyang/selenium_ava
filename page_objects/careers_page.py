@@ -36,7 +36,7 @@ class LoginPage():
         mobile_num = self.driver.find_element_by_xpath("//input[preceding-sibling::label[text()='Mobile phone number']]")
         mobile_num.send_keys("12345678")
         mobile_num = self.driver.find_element_by_xpath("//input[preceding-sibling::label[text()='Email']]")
-        mobile_num.send_keys("random+1@mail.com")
+        mobile_num.send_keys("random+5@mail.com")
         acknowledge_checkbox = self.driver.find_element_by_id("209")
         acknowledge_checkbox.click()
         continue_btn = self.driver.find_element_by_xpath("//button[text()='"+str(self.CONTINUE_BTN)+"']")

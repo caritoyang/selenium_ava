@@ -6,7 +6,7 @@ from ddt import ddt, file_data
 import sys
 import os
 
-sys.path.append("D://Kinuko//Selenium-POM")
+sys.path.append("D://Kinuko//selenium_ava")
 from page_objects.careers_page import LoginPage
 
 @ddt
@@ -33,9 +33,9 @@ class TestLogin(unittest.TestCase):
         self.assertEqual(is_login_successful, "My Profile | Company", msg="The title is different.")
 
     @classmethod
-    def tearDownClass(cls):
+    def tearDown(cls):
         cls.driver.quit()
 
 
 if __name__ == '__main__':
-    unittest.main(testRunner=HtmlTestRunner.HTMLTestRunner(output="D:/Kinuko/Selenium-POM/report"))
+    unittest.main(testRunner=HtmlTestRunner.HTMLTestRunner(output="D:/Kinuko/selenium_ava/report"))
